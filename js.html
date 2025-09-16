@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表</title>
+    <style>
+        body{
+            background: var(--primary);
+        }
+        h1 {
+            background-color: rgb(255, 89, 0);
+            color:var(--text-dark);
+            text-align: center;
+        }
+        .highlight {
+            background-color: #ddb274;
+        }
+        .navbar {
+            text-align: left;
+        }
+        .navbar a {
+            display: inline-block;
+            color: rgb(172, 26, 26);
+            text-align: left;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: rgb(255, 229, 136);
+            color: rgb(253, 255, 134);
+            border-radius: 5px;
+        }
+        strong {
+            color: rgb(255, 218, 242);
+            font-size: 1.1em;
+        }
+        em {
+            color: rgb(255, 225, 166);
+            font-weight: 1;
+        }
+        mark {
+            background-color: #ffa45a;
+            color: rgb(255, 255, 255);
+        }
+        li {
+            list-style-type: square;
+        }
+        a {
+            color: rgb(255, 94, 0);
+        }
+        :root {
+            --primary: linear-gradient(rgb(249,142,116),rgb(192,235,215));
+            --tertiary: #d9275e;
+            --text-dark: #ffffff;
+            --text-light: #000000;
+        }
+        /* 新增輪播樣式 */
+        .my-carousel {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">學習歷程</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-underline me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index1.html">自我介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">影片</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">表單</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carousel.html">輪流播放</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myCarousel" class="carousel slide my-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="tnt1.jpg" class="d-block w-100" alt="輪播圖1">
+            </div>
+            <div class="carousel-item">
+                <img src="tnt2.jpg" class="d-block w-100" alt="輪播圖2">
+            </div>
+            <div class="carousel-item">
+                <img src="tnt3.jpg" class="d-block w-100" alt="輪播圖3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
